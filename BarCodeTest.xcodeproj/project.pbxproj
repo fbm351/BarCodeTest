@@ -21,6 +21,9 @@
 		D30727391923FAEA00FBF439 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D307271B1923FAEA00FBF439 /* UIKit.framework */; };
 		D30727411923FAEA00FBF439 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D307273F1923FAEA00FBF439 /* InfoPlist.strings */; };
 		D30727431923FAEA00FBF439 /* BarCodeTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D30727421923FAEA00FBF439 /* BarCodeTestTests.m */; };
+		D307274D1924F4A100FBF439 /* beep.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D307274C1924F4A100FBF439 /* beep.mp3 */; };
+		D307274F1924F8C500FBF439 /* BallBounce.caf in Resources */ = {isa = PBXBuildFile; fileRef = D307274E1924F8C500FBF439 /* BallBounce.caf */; };
+		D3C5198419253C5600A0B9E0 /* FMProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = D3C5198319253C5600A0B9E0 /* FMProduct.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,10 @@
 		D307273E1923FAEA00FBF439 /* BarCodeTestTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BarCodeTestTests-Info.plist"; sourceTree = "<group>"; };
 		D30727401923FAEA00FBF439 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D30727421923FAEA00FBF439 /* BarCodeTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BarCodeTestTests.m; sourceTree = "<group>"; };
+		D307274C1924F4A100FBF439 /* beep.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = beep.mp3; sourceTree = "<group>"; };
+		D307274E1924F8C500FBF439 /* BallBounce.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BallBounce.caf; sourceTree = "<group>"; };
+		D3C5198219253C5600A0B9E0 /* FMProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMProduct.h; sourceTree = "<group>"; };
+		D3C5198319253C5600A0B9E0 /* FMProduct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMProduct.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +119,8 @@
 		D307271D1923FAEA00FBF439 /* BarCodeTest */ = {
 			isa = PBXGroup;
 			children = (
+				D307274C1924F4A100FBF439 /* beep.mp3 */,
+				D307274E1924F8C500FBF439 /* BallBounce.caf */,
 				D30727261923FAEA00FBF439 /* FMAppDelegate.h */,
 				D30727271923FAEA00FBF439 /* FMAppDelegate.m */,
 				D30727291923FAEA00FBF439 /* Main.storyboard */,
@@ -119,6 +128,8 @@
 				D307272D1923FAEA00FBF439 /* FMViewController.m */,
 				D307272F1923FAEA00FBF439 /* Images.xcassets */,
 				D307271E1923FAEA00FBF439 /* Supporting Files */,
+				D3C5198219253C5600A0B9E0 /* FMProduct.h */,
+				D3C5198319253C5600A0B9E0 /* FMProduct.m */,
 			);
 			path = BarCodeTest;
 			sourceTree = "<group>";
@@ -231,6 +242,8 @@
 			files = (
 				D30727301923FAEA00FBF439 /* Images.xcassets in Resources */,
 				D30727221923FAEA00FBF439 /* InfoPlist.strings in Resources */,
+				D307274F1924F8C500FBF439 /* BallBounce.caf in Resources */,
+				D307274D1924F4A100FBF439 /* beep.mp3 in Resources */,
 				D307272B1923FAEA00FBF439 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -252,6 +265,7 @@
 			files = (
 				D30727241923FAEA00FBF439 /* main.m in Sources */,
 				D30727281923FAEA00FBF439 /* FMAppDelegate.m in Sources */,
+				D3C5198419253C5600A0B9E0 /* FMProduct.m in Sources */,
 				D307272E1923FAEA00FBF439 /* FMViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -457,6 +471,7 @@
 				D30727481923FAEA00FBF439 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D30727491923FAEA00FBF439 /* Build configuration list for PBXNativeTarget "BarCodeTestTests" */ = {
 			isa = XCConfigurationList;
@@ -465,6 +480,7 @@
 				D307274B1923FAEA00FBF439 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
