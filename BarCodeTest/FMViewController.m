@@ -90,6 +90,8 @@
     
     [self.captureSession startRunning];
     
+    self.productNameLabel.text = @"";
+    
     return YES;
 }
 
