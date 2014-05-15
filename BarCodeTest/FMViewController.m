@@ -17,6 +17,7 @@
 @property (strong, nonatomic) AVAudioPlayer *audioPlayer;
 @property (strong, nonatomic) NSMutableArray *upcs;
 @property (weak, nonatomic) IBOutlet UILabel *productNameLabel;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 
 @end
 
@@ -29,6 +30,7 @@
     self.isReading = NO;
     self.captureSession = nil;
     self.productNameLabel.text = @"";
+    self.activityIndicator.hidden = YES;
     
     [self playBeepSound];
 }
@@ -101,6 +103,8 @@
     self.captureSession = nil;
     
     [self.videoPreviewLayer removeFromSuperlayer];
+    self.activityIndicator.hidden = NO;
+    [self.activityIndicator startAnimating];
 }
 
 - (void)playBeepSound
@@ -124,6 +128,7 @@
 
 - (void)lookUpUPC:(NSString *)upc
 {
+
     NSLog(@"Look Up UPC %@", upc);
     NSString *urlString = [NSString stringWithFormat:@"http://www.searchupc.com/handlers/upcsearch.ashx?request_type=3&access_token=6FBA5499-0ABE-4653-ABB2-22B5CDFC38E2&upc=%@", upc];
     NSURL *upcLookupURL = [NSURL URLWithString:urlString];
@@ -169,6 +174,10 @@
         [self.productNameLabel performSelectorOnMainThread:@selector(setText:) withObject:@"Multiple Products" waitUntilDone:NO];
 
     }
+    
+    [self.activityIndicator performSelectorOnMainThread:@selector(setHidden:) withObject:@"YES" waitUntilDone:NO];
+    [self.activityIndicator performSelectorOnMainThread:@selector(stopAnimating) withObject:nil waitUntilDone:NO];
+    
     
     
     

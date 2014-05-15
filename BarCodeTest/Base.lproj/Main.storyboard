@@ -27,6 +27,10 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="ZCY-L9-vgR">
+                                        <rect key="frame" x="122" y="262" width="37" height="37"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </activityIndicatorView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
@@ -81,6 +85,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="ZCY-L9-vgR" id="HcO-Fj-uKo"/>
                         <outlet property="productNameLabel" destination="kx0-P0-Lly" id="HPj-6C-hg0"/>
                         <outlet property="startBarButtonItem" destination="mX6-Qp-ceM" id="cQO-YD-kFI"/>
                         <outlet property="statusLabel" destination="tPd-fd-met" id="NlC-14-SAn"/>
