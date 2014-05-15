@@ -151,16 +151,21 @@
         if (product.name == nil || [product.name isEqualToString:@" "])
         {
             NSLog(@"Nothing came back");
+            [self.productNameLabel performSelectorOnMainThread:@selector(setText:) withObject:@"Nothing Came Back" waitUntilDone:NO];
         }
         else
         {
             NSLog(@"Single Product with name: %@", product.name);
+            [self.productNameLabel performSelectorOnMainThread:@selector(setText:) withObject:product.name waitUntilDone:NO];
+
         }
     }
     else if ([products count] > 1)
     {
         NSLog(@"Multiple products");
         NSLog(@"%@", products);
+        [self.productNameLabel performSelectorOnMainThread:@selector(setText:) withObject:@"Multiple Products" waitUntilDone:NO];
+
     }
     
     
