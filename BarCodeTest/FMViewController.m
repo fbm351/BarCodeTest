@@ -185,10 +185,6 @@
     
     [self.activityIndicator performSelectorOnMainThread:@selector(setHidden:) withObject:@"YES" waitUntilDone:NO];
     [self.activityIndicator performSelectorOnMainThread:@selector(stopAnimating) withObject:nil waitUntilDone:NO];
-    
-    
-    
-    
 }
 
 - (void)captureOutput:(AVCaptureOutput *)captureOutput didOutputMetadataObjects:(NSArray *)metadataObjects fromConnection:(AVCaptureConnection *)connection
