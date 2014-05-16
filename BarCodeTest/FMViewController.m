@@ -18,6 +18,7 @@
 @property (strong, nonatomic) NSMutableArray *upcs;
 @property (weak, nonatomic) IBOutlet UILabel *productNameLabel;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
+@property (nonatomic) BOOL didLookupUPC;
 
 @end
 
@@ -31,6 +32,7 @@
     self.captureSession = nil;
     self.productNameLabel.text = @"";
     self.activityIndicator.hidden = YES;
+    self.didLookupUPC = NO;
     
     [self playBeepSound];
 }
@@ -103,8 +105,14 @@
     self.captureSession = nil;
     
     [self.videoPreviewLayer removeFromSuperlayer];
-    self.activityIndicator.hidden = NO;
-    [self.activityIndicator startAnimating];
+    
+    if (self.didLookupUPC)
+    {
+        self.activityIndicator.hidden = NO;
+        [self.activityIndicator startAnimating];
+    }
+    self.didLookupUPC = NO;
+    
 }
 
 - (void)playBeepSound
@@ -143,7 +151,7 @@
     NSLog(@"Item count %lu", (unsigned long)[dataDictionary count]);
     for (id key in dataDictionary)
     {
-        NSLog(@"Key = %@", key);
+        //NSLog(@"Key = %@", key);
         
         item = [dataDictionary objectForKey:key];
         FMProduct *product = [[FMProduct alloc] initWithUPC:upc];
@@ -200,6 +208,7 @@
             {
                 [self.audioPlayer play];
             }
+            self.didLookupUPC = YES;
             [self lookUpUPC:[metadataObj stringValue]];
         }
     }
